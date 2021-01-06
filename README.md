@@ -47,7 +47,7 @@ Parameter to be tuned: K
 -------------------------
 Parameter to be tuned: n_estimators
 
-5. Naïve Bayes 
+5. Naïve Bayes (Done)
 ----------------------------
 Parameters to be tuned: None
 
