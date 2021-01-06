@@ -12,6 +12,7 @@ class K_Nearest_Neighbor:
         self.y_pred = None
         self.classfier = self.train()
 
+
     def train(self):
         from sklearn.preprocessing import StandardScaler
         scaler = StandardScaler()

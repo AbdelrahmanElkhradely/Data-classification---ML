@@ -14,6 +14,7 @@ class Naive_Bayes:
         self.classfier=self.train()
 
 
+
     def train(self):
         # Create a Gaussian Classifier
         gnb = GaussianNB()
