@@ -24,7 +24,7 @@ def load_magic_data():
     featureNames = ['fLength', 'fWidth', 'fSize', 'fConc', 'fConc1', 'fAsym',
                     'fM3Long', 'fM3Trans', 'fAlpha', 'fDist']
 
-    filepath = 'data/magic04.data'
+    filepath = 'data/dataset.data'
 
     data = pd.read_csv(filepath, names=Ynames, header=None)
 
