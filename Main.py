@@ -12,6 +12,7 @@ from sklearn.metrics import roc_curve, auc
 #rom sklearn.cross_validation import train_test_split
 from sklearn.utils import shuffle
 
+from K_Nearest_Neighbor import K_Nearest_Neighbor
 from TreeDecision import TreeDecision
 
 
@@ -43,6 +44,9 @@ def main():
     Xtrain, Xtest, Ytrain, Ytest = train_test_split(X, Y, test_size=0.3, random_state=None)
     treedecison= TreeDecision(Xtrain, Xtest, Ytrain, Ytest)
     treedecison.treedecision()
+    k_nearest_neighbor=K_Nearest_Neighbor(Xtrain, Xtest, Ytrain, Ytest)
+    print("-----------------------------------------------------------------------------")
+    k_nearest_neighbor.predict()
 
 if __name__ == "__main__":
     main()
