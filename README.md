@@ -30,18 +30,25 @@ form 30% of it.
 Apply the classifiers from the following models on your dataset, tune parameter(s) (if any), compare the
 performance of models with each other
 1. Decision Tree (Done)
+-----------------------------
+
 Parameters to be tuned: None
 
 2. AdaBoost
+-----------------------------
+
 Parameter to be tuned: n_estimators
 
 3. K-Nearest Neighbor (K-NN) (Done)
+-----------------------------------
 Parameter to be tuned: K
 
 4. Random Forests
+-------------------------
 Parameter to be tuned: n_estimators
 
 5. Naïve Bayes 
+----------------------------
 Parameters to be tuned: None
 
 #IV.Model Parameter Tuning
@@ -49,6 +56,7 @@ Parameters to be tuned: None
 
 Use cross-validation to tune the parameters of classifiers. Test the models trained with best obtained
 parameter values on the separate testing set.
+
 V. Report Requirements
 ====================
 
