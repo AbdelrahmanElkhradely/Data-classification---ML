@@ -9,11 +9,11 @@ class TreeDecision:
         self.y_train=Ytrain
         self.X_test=Xtest
         self.y_test=Ytest
-        self.clf_entropy= self.tarin_using_entropy()
+        self.clf_entropy= self.train_using_entropy()
         self.y_pred=None
 
     # Function to perform training with entropy.
-    def tarin_using_entropy(self):
+    def train_using_entropy(self):
 
         # Decision tree with entropy
         clf_entropy = DecisionTreeClassifier(
@@ -53,7 +53,7 @@ class TreeDecision:
         fpr, tpr, thresholds = roc_curve(self.y_test, probs[:, 1])
         roc_auc = auc(fpr, tpr)
         plt.plot(fpr, tpr, label='%s (area = %0.2f)' % ("Tree decison", roc_auc))
-        plt.plot([0, 1], [0, 1], 'k--')
+        plt.plot([0, 1], [0, 1])
         plt.xlim([0.0, 1.0])
         plt.ylim([0.0, 1.0])
         plt.xlabel('False Positive Rate')

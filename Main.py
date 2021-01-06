@@ -13,6 +13,7 @@ from sklearn.metrics import roc_curve, auc
 from sklearn.utils import shuffle
 
 from K_Nearest_Neighbor import K_Nearest_Neighbor
+from Naive_Bayes import Naive_Bayes
 from TreeDecision import TreeDecision
 
 
@@ -42,11 +43,21 @@ def main():
     (X, Y, Ynames) = load_magic_data()
     X = StandardScaler().fit_transform(X)
     Xtrain, Xtest, Ytrain, Ytest = train_test_split(X, Y, test_size=0.3, random_state=None)
+    print("-----------------------------------------------------------------------------")
+    print("DECISION TREE")
+    print("++++++++++++++++")
     treedecison= TreeDecision(Xtrain, Xtest, Ytrain, Ytest)
     treedecison.treedecision()
-    k_nearest_neighbor=K_Nearest_Neighbor(Xtrain, Xtest, Ytrain, Ytest)
     print("-----------------------------------------------------------------------------")
-    k_nearest_neighbor.predict()
+    print("K NEAREST NEIGHBOT")
+    print("+++++++++++++++++++")
+    k_nearest_neighbor=K_Nearest_Neighbor(Xtrain, Xtest, Ytrain, Ytest)
+    k_nearest_neighbor.knearest()
+    print("-----------------------------------------------------------------------------")
+    print("NAIVE BAYES")
+    print("+++++++++++++")
+    naivebayes = Naive_Bayes(Xtrain, Xtest, Ytrain, Ytest)
+    naivebayes.naivebayes()
 
 if __name__ == "__main__":
     main()

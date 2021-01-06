@@ -1,30 +1,29 @@
-from sklearn.metrics import accuracy_score, roc_curve, auc, confusion_matrix, classification_report
-from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import confusion_matrix, accuracy_score, classification_report, roc_curve, auc
+from sklearn.naive_bayes import GaussianNB
 import matplotlib.pyplot as plt
 
 
-class K_Nearest_Neighbor:
-    def __init__(self,Xtrain, Xtest, Ytrain, Ytest):
+
+class Naive_Bayes:
+    def __init__(self, Xtrain, Xtest, Ytrain, Ytest):
         self.X_train = Xtrain
         self.y_train = Ytrain
         self.X_test = Xtest
         self.y_test = Ytest
         self.y_pred = None
-        self.classfier = self.train()
+        self.classfier=self.train()
+
     def train(self):
-        from sklearn.preprocessing import StandardScaler
-        scaler = StandardScaler()
-        scaler.fit(self.X_train)
-        X_train = scaler.transform(self.X_train)
-        X_test = scaler.transform(self.X_test)
-        from sklearn.neighbors import KNeighborsClassifier
-        classifier = KNeighborsClassifier(n_neighbors=100)
-        classifier.fit(X_train, self.y_train)
-        self.y_pred = classifier.predict(X_test)
+        # Create a Gaussian Classifier
+        gnb = GaussianNB()
+        # Train the model using the training sets
+        gnb.fit(self.X_train, self.y_train)
+        # Predict the response for test dataset
+        self.y_pred = gnb.predict(self.X_test)
         print("Predicted values:")
         print(self.y_pred)
-        return classifier
 
+        return gnb
     def cal_accuracy(self):
         print("Confusion Matrix: ",
               confusion_matrix(self.y_test, self.y_pred))
@@ -34,8 +33,7 @@ class K_Nearest_Neighbor:
 
         print("Report:",
               classification_report(self.y_test, self.y_pred))
-    def knearest (self):
-
+    def naivebayes(self):
         self.cal_accuracy()
         plt.figure(figsize=(8, 8))
         self.classfier.fit(self.X_train, self.y_train)
