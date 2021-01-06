@@ -44,9 +44,13 @@ parameter values on the separate testing set.
 V. Report Requirements
 • For all the requirements mentioned above you should report the model accuracy, precision, recall
 and F- measure as well as the resultant confusion matrix using the testing data.
+
 • Comment on all comparisons made.
+
 • Provide screenshots of the main parts of the code with comments.
-VI. Bonus
+
+
+#VI. Bonus
 Use Keras to build a neural network with dense layers and apply the model on your dataset. Use 2 layers and
 tune the number of hidden units in every layer. You should provide the above report requirement also for the
 bonus part.
