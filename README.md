@@ -34,7 +34,7 @@ performance of models with each other
 
 Parameters to be tuned: None
 
-2. AdaBoost
+2. AdaBoost (Done)
 -----------------------------
 
 Parameter to be tuned: n_estimators

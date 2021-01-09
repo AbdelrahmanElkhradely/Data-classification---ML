@@ -12,6 +12,7 @@ from sklearn.metrics import roc_curve, auc
 #rom sklearn.cross_validation import train_test_split
 from sklearn.utils import shuffle
 
+from AdaBoost import AdaBoost
 from K_Nearest_Neighbor import K_Nearest_Neighbor
 from Naive_Bayes import Naive_Bayes
 from TreeDecision import TreeDecision
@@ -58,6 +59,11 @@ def main():
     print("+++++++++++++")
     naivebayes = Naive_Bayes(Xtrain, Xtest, Ytrain, Ytest)
     naivebayes.naivebayes()
+    print("-----------------------------------------------------------------------------")
+    print("ADA BOOST")
+    print("+++++++++++++")
+    adaboost = AdaBoost(Xtrain, Xtest, Ytrain, Ytest)
+    adaboost.adaboost()
 
 if __name__ == "__main__":
 
