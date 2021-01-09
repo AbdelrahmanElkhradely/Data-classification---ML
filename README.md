@@ -43,7 +43,7 @@ Parameter to be tuned: n_estimators
 -----------------------------------
 Parameter to be tuned: K
 
-4. Random Forests
+4. Random Forests (Done)
 -------------------------
 Parameter to be tuned: n_estimators
 

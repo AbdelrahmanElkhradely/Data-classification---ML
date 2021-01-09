@@ -15,6 +15,7 @@ from sklearn.utils import shuffle
 from AdaBoost import AdaBoost
 from K_Nearest_Neighbor import K_Nearest_Neighbor
 from Naive_Bayes import Naive_Bayes
+from Random_Forests import Random_Forests
 from TreeDecision import TreeDecision
 
 
@@ -64,6 +65,11 @@ def main():
     print("+++++++++++++")
     adaboost = AdaBoost(Xtrain, Xtest, Ytrain, Ytest)
     adaboost.adaboost()
+    print("-----------------------------------------------------------------------------")
+    print("Random_Forests")
+    print("+++++++++++++")
+    random_forests = Random_Forests(Xtrain, Xtest, Ytrain, Ytest)
+    random_forests.random_forests()
 
 if __name__ == "__main__":
 
